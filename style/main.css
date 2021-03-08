@@ -1,0 +1,131 @@
+:root{
+    /*Uma boa prática de codifiação é criar uma variável
+    dentro do css, isso possibilita fazer alterações de determinada
+    configuração de forma rapida so alterando a varivel sem a nescessidade
+    de procurar no codigo inteiro. como exemplo temos a criação de duas variaveis
+    para cores que serão utilizadas nesse projeto.*/
+    --vermelho: #e50914;
+    --preta: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /*faz com que os elementos 
+    de dentro de uma determinada caixa
+    não aumente o tamanho dela se eles forem maior, 
+    nesse caso esse elemento se espreme ali dentro respeitando
+    a borda da caixa*/
+    box-sizing: border-box; 
+    
+}
+/*Elementos base*/
+
+body {
+    background-color: var(--preta);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header .container {
+    /*Todas vez que vc 
+    coloca o flex por padrão ele 
+    coloca os elementos em linha*/
+    display: flex;
+    flex-direction: row; /*por padrão vem como row*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Arial Black';
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/*FILME PRINCIPAL*/
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/filme-principal.jpg');
+    
+    height: 500px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*Segue sempre a direção do flex-direction*/
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 90px;
+    
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS';
+}
+
+.botao{
+    background-color:rgba(0,0,0,50%) ;
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s ease all;
+    
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 50%;
+}
+
+
+/*WAPPER
+* quando você defini uma configuração do pai os filhos 
+(de primeiro grau) herdam essas configurações. 
+Esse é o objetivo das classes container/Wapper.
+*/
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+    
+}
